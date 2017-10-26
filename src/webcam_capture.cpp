@@ -1,18 +1,18 @@
 
 //opencv
-#include "opencv2/opencv.hpp"
+#include "opencv2/opencv.hpp"    //libray cv
 
 //std
-#include <iostream>
+#include <iostream>   
 #include <cstdlib>
 
 //main
 int main(int argc, char *argv[])
 {
-    cv::VideoCapture camera; //OpenCV video capture object
+    cv::VideoCapture camera; //OpenCV video capture object    //adding objects at the existing class
     cv::Mat image; //OpenCV image object
-	int cam_id; //camera id . Associated to device number in /dev/videoX
-	cv::Scalar_<unsigned char> px_value; //pixel value (4-element vector)
+	int cam_id; //camera id . Associated to device number in /dev/videoX //camera identifier
+	cv::Scalar_<unsigned char> px_value; //pixel value (4-element vector)  // add 4 element value at the class
 	int user_key; //user pressed key to quit
 
 	//check user args
@@ -22,22 +22,22 @@ int main(int argc, char *argv[])
 			cam_id = 0;
 			break;
 		case 2: //an argument is provided. Get it and set cam_id
-			cam_id = atoi(argv[1]);
+			cam_id = atoi(argv[1]);  //acquisition of the camera_id PC
 			break;
-		default:
+		default:		//adding if it hasn't been detected an argument. show possible errors 
 			std::cout << "Invalid number of arguments. Call program as: webcam_capture [video_device_id]. " << std::endl;
 			std::cout << "EXIT program." << std::endl;
 			break;
 	}
 
 	//advertising to the user
-	std::cout << "Opening video device " << cam_id << std::endl;
+	std::cout << "Opening video device " << cam_id << std::endl; //in the same var add info at the class std
 
     //open the video stream and make sure it's opened
-    if( !camera.open(cam_id) )
+    if( !camera.open(cam_id) )		// id mistaken
 	{
         std::cout << "Error opening the camera. May be invalid device id. EXIT program." << std::endl;
-        return -1;
+        return -1;				//show message error and end program
     }
 
     //capture loop. Out of user press a key
