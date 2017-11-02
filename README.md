@@ -1,9 +1,9 @@
 # webcam_capture
 Just webcam capture
 
-Inicialmente realiza un fork del proyecto.
+#Inicialmente realiza un fork del proyecto.
 
-Realiza las instalaciones siguientes:
+#Realiza las instalaciones siguientes:
 
         - CMake. 
         
@@ -13,15 +13,15 @@ Realiza las instalaciones siguientes:
         
           Estructura en el terminal "sudo apt-get  isntll libopencv-dev".
           
-Compilar y Ejecutar el código, pasos a seguir:
+#Compilar y Ejecutar el código, pasos a seguir:
 
-cd webcam_capture.
+        cd webcam_capture.
 
-mkdir build.
+        mkdir build.
 
-cd build.
+        cd build.
 
-cmake cMakeLists.txt.
+        cmake cMakeLists.txt.
 
-make. 
+        make
 
